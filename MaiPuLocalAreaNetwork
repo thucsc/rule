@@ -3,4 +3,4 @@ IP-CIDR,19.16.1.0/8,no-resolve
 # FRP地址
 IP-CIDR,152.67.196.0/8,no-resolve
 # 本地
-IP-CIDR,127.0.0.0/8,no-resolve
+DOMAIN-SUFFIX,qius.nl
