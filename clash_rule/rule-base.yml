@@ -41,21 +41,21 @@ rule-providers:
   openai:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/thucsc/rule/master/openai.txt"
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/openai.txt"
     path: ./ruleset/openai.yaml
     interval: 86400
   #Netflix列表
   netflix:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/thucsc/rule/master/netflix.txt"
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/netflix.txt"
     path: ./ruleset/netflix.yaml
     interval: 86400
   #Netflix列表
   disney:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/thucsc/rule/master/disney.txt"
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/disney.txt"
     path: ./ruleset/netflix.yaml
     interval: 86400
   #代理域名列表 proxy.txt：
@@ -76,7 +76,7 @@ rule-providers:
   local:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/thucsc/rule/master/local.txt"
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/local.txt"
     path: ./ruleset/direct.yaml
     interval: 86400
   #私有网络专用域名列表 private.txt：
