@@ -1,0 +1,137 @@
+mixed-port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+
+cfw-latency-timeout: 3000
+cfw-latency-url: http://www.gstatic.com/generate_204
+
+rule-providers:
+  #广告域名列表 reject.txt：
+  reject:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  #iCloud 域名列表 icloud.txt：
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  #Apple 在中国大陆可直连的域名列表 apple.txt：
+  apple:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  #[慎用]Google 在中国大陆可直连的域名列表 google.txt：
+  google:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+  #OpenAI域名列表
+  openai:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/openai.txt"
+    path: ./ruleset/openai.yaml
+    interval: 86400
+  #Netflix列表
+  netflix:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/netflix.txt"
+    path: ./ruleset/netflix.yaml
+    interval: 86400
+  #Netflix列表
+  disney:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/disney.txt"
+    path: ./ruleset/netflix.yaml
+    interval: 86400
+  #代理域名列表 proxy.txt：
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  #直连域名列表 direct.txt：
+  direct:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  #直连域名列表 direct.txt：
+  local:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/local.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  #私有网络专用域名列表 private.txt：
+  private:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+  #GFWList 域名列表 gfw.txt：
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  #GreatFire 域名列表 greatfire.txt：
+  greatfire:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt"
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  #非中国大陆使用的顶级域名列表 tld-not-cn.txt：
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  #Telegram 使用的 IP 地址列表 telegramcidr.txt：
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  #中国大陆 IP 地址列表 cncidr.txt：
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  #局域网 IP 及保留 IP 地址列表 lancidr.txt：
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  #需要直连的常见软件列表 applications.txt：
+  applications:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
