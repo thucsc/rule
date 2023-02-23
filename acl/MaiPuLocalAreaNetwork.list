@@ -1,0 +1,7 @@
+# 麦普局域网地址
+IP-CIDR,19.16.1.0/24,no-resolve
+# FRP地址
+IP-CIDR,152.67.196.0/24,no-resolve
+# 我的网页
+DOMAIN-SUFFIX,qius.nl
+DOMAIN-SUFFIX,qiud.org
