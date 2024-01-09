@@ -5,3 +5,7 @@ IP-CIDR,152.67.196.0/24,no-resolve
 # 我的网页
 DOMAIN-SUFFIX,qius.nl
 DOMAIN-SUFFIX,qiud.org
+# 天擎认证
+DOMAIN-SUFFIX,uts.cma
+# 贵州天擎
+IP-CIDR,10.203.64.50/24,no-resolve
