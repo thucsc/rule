@@ -9,6 +9,55 @@ cfw-latency-timeout: 3000
 cfw-latency-url: http://www.gstatic.com/generate_204
 
 rule-providers:
+  #自定义直连列表 self-direct
+  self-direct:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/self-direct.txt"
+    path: ./ruleset/self-direct.yaml
+    interval: 86400
+  #自定义代理列表 self-proxy
+  self-proxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/self-proxy.txt"
+    path: ./ruleset/self-proxy.yaml
+    interval: 86400
+  #自定义拒绝列表 self-reject
+  self-reject:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/self-reject.txt"
+    path: ./ruleset/self-reject.yaml
+    interval: 86400
+  #OpenAI域名列表
+  openai:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/openai.txt"
+    path: ./ruleset/openai.yaml
+    interval: 86400
+  #OpenAI域名拒绝列表
+  openai:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/openai-reject.txt"
+    path: ./ruleset/openai-reject.yaml
+    interval: 86400
+  #Netflix列表
+  netflix:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/netflix.txt"
+    path: ./ruleset/netflix.yaml
+    interval: 86400
+  #Netflix列表
+  disney:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/disney.txt"
+    path: ./ruleset/netflix.yaml
+    interval: 86400
   #广告域名列表 reject.txt：
   reject:
     type: http
@@ -37,27 +86,6 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt"
     path: ./ruleset/google.yaml
     interval: 86400
-  #OpenAI域名列表
-  openai:
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/openai.txt"
-    path: ./ruleset/openai.yaml
-    interval: 86400
-  #Netflix列表
-  netflix:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/netflix.txt"
-    path: ./ruleset/netflix.yaml
-    interval: 86400
-  #Netflix列表
-  disney:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/disney.txt"
-    path: ./ruleset/netflix.yaml
-    interval: 86400
   #代理域名列表 proxy.txt：
   proxy:
     type: http
@@ -70,13 +98,6 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
-    path: ./ruleset/direct.yaml
-    interval: 86400
-  #直连域名列表 direct.txt：
-  local:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/thucsc/rule/master/clash_rule/local.txt"
     path: ./ruleset/direct.yaml
     interval: 86400
   #私有网络专用域名列表 private.txt：
