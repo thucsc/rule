@@ -10,5 +10,3 @@ DOMAIN-SUFFIX,960522.xyz
 DOMAIN-SUFFIX,uts.cma
 # 贵州天擎
 IP-CIDR,10.203.64.50/24,no-resolve
-# hostloc全球主机论坛
-DOMAIN-SUFFIX,hostloc.com
