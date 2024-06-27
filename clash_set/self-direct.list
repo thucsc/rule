@@ -10,3 +10,9 @@ DOMAIN-SUFFIX,960522.xyz
 DOMAIN-SUFFIX,uts.cma
 # 贵州天擎
 IP-CIDR,10.203.64.50/24,no-resolve
+# tailscale
+IP-CIDR,100.64.0.0/24,no-resolve
+PROCESS-NAME,Tailscale.exe
+PROCESS-NAME,Tailscale Service.exe
+PROCESS-NAME,tailscaled.exe
+PROCESS-NAME,tailscale-ipn.exe
