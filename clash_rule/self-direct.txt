@@ -12,8 +12,8 @@ payload:
   # 贵州天擎
   - IP-CIDR,10.203.64.50/24,no-resolve
   # tailscale
-  - IP-CIDR,100.64.0.0/24,no-resolve
-  - IP-CIDR6,fd7a:115c:a1e0::/64
+  - IP-CIDR,100.64.0.0/10,no-resolve
+  - IP-CIDR6,fd7a:115c:a1e0::/48
   - PROCESS-NAME,Tailscale.exe
   - PROCESS-NAME,Tailscale Service.exe
   - PROCESS-NAME,tailscaled.exe
