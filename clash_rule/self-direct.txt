@@ -13,7 +13,7 @@ payload:
   - IP-CIDR,10.203.64.50/24,no-resolve
   # tailscale
   - IP-CIDR,100.64.0.0/24,no-resolve
-  - PROCESS-NAME,Tailscale.exe,DIRECT
-  - PROCESS-NAME,Tailscale Service.exe,DIRECT
-  - PROCESS-NAME,tailscaled.exe,DIRECT
-  - PROCESS-NAME,tailscale-ipn.exe,DIRECT
+  - PROCESS-NAME,Tailscale.exe
+  - PROCESS-NAME,Tailscale Service.exe
+  - PROCESS-NAME,tailscaled.exe
+  - PROCESS-NAME,tailscale-ipn.exe
